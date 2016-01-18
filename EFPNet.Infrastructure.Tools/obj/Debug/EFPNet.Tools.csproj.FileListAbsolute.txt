@@ -1,0 +1,8 @@
+E:\开发\我的项目\LAP\Tools\bin\Debug\EFPNet.Tools.dll
+E:\开发\我的项目\LAP\Tools\bin\Debug\EFPNet.Tools.pdb
+E:\开发\我的项目\LAP\Tools\obj\Debug\EFPNet.Tools.dll
+E:\开发\我的项目\LAP\Tools\obj\Debug\EFPNet.Tools.pdb
+E:\开发\我的项目\EFPNet\Tools\bin\Debug\EFPNet.Tools.dll
+E:\开发\我的项目\EFPNet\Tools\bin\Debug\EFPNet.Tools.pdb
+E:\开发\我的项目\EFPNet\Tools\obj\Debug\EFPNet.Tools.dll
+E:\开发\我的项目\EFPNet\Tools\obj\Debug\EFPNet.Tools.pdb

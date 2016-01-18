@@ -1,0 +1,4 @@
+E:\开发\我的项目\LAP\Repository\bin\Debug\EFPNet.Repository.dll
+E:\开发\我的项目\LAP\Repository\bin\Debug\EFPNet.Repository.pdb
+E:\开发\我的项目\LAP\Repository\obj\Debug\EFPNet.Repository.dll
+E:\开发\我的项目\LAP\Repository\obj\Debug\EFPNet.Repository.pdb

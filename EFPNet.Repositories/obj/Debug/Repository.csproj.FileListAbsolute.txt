@@ -1,0 +1,4 @@
+E:\开发\我的项目\LAP\Repository\bin\Debug\Repository.dll
+E:\开发\我的项目\LAP\Repository\bin\Debug\Repository.pdb
+E:\开发\我的项目\LAP\Repository\obj\Debug\Repository.dll
+E:\开发\我的项目\LAP\Repository\obj\Debug\Repository.pdb

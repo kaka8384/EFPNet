@@ -1,0 +1,4 @@
+E:\开发\我的项目\LAP\Data\bin\Debug\Data.dll
+E:\开发\我的项目\LAP\Data\bin\Debug\Data.pdb
+E:\开发\我的项目\LAP\Data\obj\Debug\Data.dll
+E:\开发\我的项目\LAP\Data\obj\Debug\Data.pdb

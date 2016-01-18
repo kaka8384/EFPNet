@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>jquery.validate.china</id>
+    <version>1.0.5</version>
+    <title />
+    <authors>蓝光灏</authors>
+    <owners>蓝光灏</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>jquery.validate的扩展</description>
+  </metadata>
+</package>

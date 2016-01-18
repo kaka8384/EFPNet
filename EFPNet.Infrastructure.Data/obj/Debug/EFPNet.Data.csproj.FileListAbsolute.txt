@@ -1,0 +1,9 @@
+E:\开发\我的项目\LAP\Data\bin\Debug\EFPNet.Data.dll
+E:\开发\我的项目\LAP\Data\bin\Debug\EFPNet.Data.pdb
+E:\开发\我的项目\LAP\Data\obj\Debug\EFPNet.Data.dll
+E:\开发\我的项目\LAP\Data\obj\Debug\EFPNet.Data.pdb
+E:\开发\我的项目\EFPNet\Data\bin\Debug\EFPNet.Data.dll
+E:\开发\我的项目\EFPNet\Data\bin\Debug\EFPNet.Data.pdb
+E:\开发\我的项目\EFPNet\Data\obj\Debug\EFPNet.Data.csprojResolveAssemblyReference.cache
+E:\开发\我的项目\EFPNet\Data\obj\Debug\EFPNet.Data.dll
+E:\开发\我的项目\EFPNet\Data\obj\Debug\EFPNet.Data.pdb

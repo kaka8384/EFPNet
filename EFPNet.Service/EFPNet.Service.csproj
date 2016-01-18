@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1194363-E60E-41C8-9470-81904CEAB628}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFPNet.Service</RootNamespace>
+    <AssemblyName>EFPNet.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.1.5\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="EmitMapper">
+      <HintPath>..\packages\EmitMapper.1.0.0\lib\EmitMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ActionRightService.cs" />
+    <Compile Include="DbInitializerService.cs" />
+    <Compile Include="System\OperateLogService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Account\UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EFPNet.Domain.Data\EFPNet.Domain.Data.csproj">
+      <Project>{639F1F01-806A-46C1-B8E0-53C559A54736}</Project>
+      <Name>EFPNet.Domain.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.Domains\EFPNet.Domains.csproj">
+      <Project>{8059D2F8-8622-4BEC-817F-54AD24619A2A}</Project>
+      <Name>EFPNet.Domains</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.Infrastructure.Data\EFPNet.Infrastructure.Data.csproj">
+      <Project>{3468B2DB-BADF-4952-9B9E-FA352FCC46BE}</Project>
+      <Name>EFPNet.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.Infrastructure.Tools\EFPNet.Infrastructure.Tools.csproj">
+      <Project>{c2346abb-30c8-4404-97aa-24333d36ed22}</Project>
+      <Name>EFPNet.Infrastructure.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.IService\EFPNet.IService.csproj">
+      <Project>{71026CC1-E914-41D3-8EBB-1CB7DC9370AC}</Project>
+      <Name>EFPNet.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.ViewModel\EFPNet.ViewModel.csproj">
+      <Project>{EDF3DCF9-CA54-413F-9113-7D35C4044FED}</Project>
+      <Name>EFPNet.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+E:\开发\我的项目\LAP\Tools\bin\Debug\Tools.dll
+E:\开发\我的项目\LAP\Tools\bin\Debug\Tools.pdb
+E:\开发\我的项目\LAP\Tools\obj\Debug\Tools.dll
+E:\开发\我的项目\LAP\Tools\obj\Debug\Tools.pdb

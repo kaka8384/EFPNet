@@ -1,0 +1,17 @@
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EFPNet.Domain.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\Autofac.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EFPNet.Infrastructure.Data.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EFPNet.Infrastructure.Tools.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EntityFramework.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EFPNet.Infrastructure.Data.pdb
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EFPNet.Infrastructure.Tools.pdb
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\Autofac.xml
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EntityFramework.xml
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\obj\Debug\EFPNet.Domain.csprojResolveAssemblyReference.cache
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EFPNet.Domains.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\bin\Debug\EFPNet.Domains.pdb
+E:\开发\我的项目\EFPNet\EFPNet.Domain\obj\Debug\EFPNet.Domains.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\obj\Debug\EFPNet.Domains.pdb
+E:\开发\我的项目\EFPNet\EFPNet.Domain\obj\Debug\EFPNet.Domain.dll
+E:\开发\我的项目\EFPNet\EFPNet.Domain\obj\Debug\EFPNet.Domain.pdb

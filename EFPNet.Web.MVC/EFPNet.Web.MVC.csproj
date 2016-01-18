@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{275B77E2-EE6D-4A4E-9D98-EA37147B2753}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFPNet.Web.MVC</RootNamespace>
+    <AssemblyName>EFPNet.Web.MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.1.5\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EFP.Common">
+      <HintPath>..\lib\EFP.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Jquery.Validate.Additional">
+      <HintPath>..\packages\jquery.validate.china.1.0.5\lib\net45\Jquery.Validate.Additional.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BootStrapper.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="App_Code\CustomAuthorize.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filter\LogFilter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\login-bkground.jpg" />
+    <Content Include="Images\login-sprite.png" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="metronic\charts.html" />
+    <Content Include="metronic\email1.html" />
+    <Content Include="metronic\email2.html" />
+    <Content Include="metronic\email3.html" />
+    <Content Include="metronic\email4.html" />
+    <Content Include="metronic\email5.html" />
+    <Content Include="metronic\email6.html" />
+    <Content Include="metronic\extra_404_option1.html" />
+    <Content Include="metronic\extra_404_option2.html" />
+    <Content Include="metronic\extra_404_option3.html" />
+    <Content Include="metronic\extra_500_option1.html" />
+    <Content Include="metronic\extra_500_option2.html" />
+    <Content Include="metronic\extra_faq.html" />
+    <Content Include="metronic\extra_image_manager.html" />
+    <Content Include="metronic\extra_invoice.html" />
+    <Content Include="metronic\extra_lock.html" />
+    <Content Include="metronic\extra_pricing_table.html" />
+    <Content Include="metronic\extra_profile.html" />
+    <Content Include="metronic\extra_search.html" />
+    <Content Include="metronic\form_component.html" />
+    <Content Include="metronic\form_dropzone.html" />
+    <Content Include="metronic\form_fileupload.html" />
+    <Content Include="metronic\form_layout.html" />
+    <Content Include="metronic\form_samples.html" />
+    <Content Include="metronic\form_validation.html" />
+    <Content Include="metronic\form_wizard.html" />
+    <Content Include="metronic\inbox.html" />
+    <Content Include="metronic\inbox_inbox.html" />
+    <Content Include="metronic\index - 复制.html" />
+    <Content Include="metronic\index.html" />
+    <Content Include="metronic\layout_ajax.html" />
+    <Content Include="metronic\layout_ajax_content_2.html" />
+    <Content Include="metronic\layout_ajax_content_3.html" />
+    <Content Include="metronic\layout_blank_page.html" />
+    <Content Include="metronic\layout_boxed_not_responsive.html" />
+    <Content Include="metronic\layout_boxed_page.html" />
+    <Content Include="metronic\layout_email.html" />
+    <Content Include="metronic\layout_horizontal_menu1.html" />
+    <Content Include="metronic\layout_horizontal_menu2.html" />
+    <Content Include="metronic\layout_horizontal_sidebar_menu.html" />
+    <Content Include="metronic\layout_promo.html" />
+    <Content Include="metronic\layout_sidebar_closed.html" />
+    <Content Include="metronic\login.html" />
+    <Content Include="metronic\login_soft.html" />
+    <Content Include="metronic\maps_google.html" />
+    <Content Include="metronic\maps_vector.html" />
+    <Content Include="metronic\media\css\about-us.css" />
+    <Content Include="metronic\media\css\animate.css" />
+    <Content Include="metronic\media\css\blog.css" />
+    <Content Include="metronic\media\css\blue.css" />
+    <Content Include="metronic\media\css\bootstrap-fileupload.css" />
+    <Content Include="metronic\media\css\bootstrap-modal.css" />
+    <Content Include="metronic\media\css\bootstrap-responsive.min.css" />
+    <Content Include="metronic\media\css\bootstrap-responsive1.min.css" />
+    <Content Include="metronic\media\css\bootstrap-tag.css" />
+    <Content Include="metronic\media\css\bootstrap-toggle-buttons.css" />
+    <Content Include="metronic\media\css\bootstrap-tree.css" />
+    <Content Include="metronic\media\css\bootstrap-wysihtml5.css" />
+    <Content Include="metronic\media\css\bootstrap.min.css" />
+    <Content Include="metronic\media\css\brown.css" />
+    <Content Include="metronic\media\css\chosen.css" />
+    <Content Include="metronic\media\css\clockface.css" />
+    <Content Include="metronic\media\css\colorpicker.css" />
+    <Content Include="metronic\media\css\coming-soon.css" />
+    <Content Include="metronic\media\css\datepicker.css" />
+    <Content Include="metronic\media\css\daterangepicker.css" />
+    <Content Include="metronic\media\css\datetimepicker.css" />
+    <Content Include="metronic\media\css\default.css" />
+    <Content Include="metronic\media\css\dropzone.css" />
+    <Content Include="metronic\media\css\DT_bootstrap.css" />
+    <Content Include="metronic\media\css\email.css" />
+    <Content Include="metronic\media\css\error.css" />
+    <Content Include="metronic\media\css\font-awesome.css" />
+    <Content Include="metronic\media\css\font-awesome.min.css" />
+    <Content Include="metronic\media\css\fullcalendar.css" />
+    <Content Include="metronic\media\css\glyphicons.css" />
+    <Content Include="metronic\media\css\grey.css" />
+    <Content Include="metronic\media\css\halflings.css" />
+    <Content Include="metronic\media\css\inbox.css" />
+    <Content Include="metronic\media\css\invoice.css" />
+    <Content Include="metronic\media\css\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="metronic\media\css\jquery.easy-pie-chart.css" />
+    <Content Include="metronic\media\css\jquery.fancybox.css" />
+    <Content Include="metronic\media\css\jquery.fileupload-ui.css" />
+    <Content Include="metronic\media\css\jquery.gritter.css" />
+    <Content Include="metronic\media\css\jquery.nestable.css" />
+    <Content Include="metronic\media\css\jquery.tagsinput.css" />
+    <Content Include="metronic\media\css\jquery.ui.slider.css" />
+    <Content Include="metronic\media\css\jqvmap.css" />
+    <Content Include="metronic\media\css\light.css" />
+    <Content Include="metronic\media\css\lock.css" />
+    <Content Include="metronic\media\css\login-soft.css" />
+    <Content Include="metronic\media\css\login.css" />
+    <Content Include="metronic\media\css\multi-select-metro.css" />
+    <Content Include="metronic\media\css\news.css" />
+    <Content Include="metronic\media\css\pricing-tables.css" />
+    <Content Include="metronic\media\css\print.css" />
+    <Content Include="metronic\media\css\profile.css" />
+    <Content Include="metronic\media\css\promo.css" />
+    <Content Include="metronic\media\css\purple.css" />
+    <Content Include="metronic\media\css\search.css" />
+    <Content Include="metronic\media\css\select2_metro.css" />
+    <Content Include="metronic\media\css\style-metro.css" />
+    <Content Include="metronic\media\css\style-non-responsive.css" />
+    <Content Include="metronic\media\css\style-responsive.css" />
+    <Content Include="metronic\media\css\style.css" />
+    <Content Include="metronic\media\css\timeline.css" />
+    <Content Include="metronic\media\css\timepicker.css" />
+    <Content Include="metronic\media\css\uniform.default.css" />
+    <Content Include="metronic\media\image\1.jpg" />
+    <Content Include="metronic\media\image\10.jpg" />
+    <Content Include="metronic\media\image\11.jpg" />
+    <Content Include="metronic\media\image\2.jpg" />
+    <Content Include="metronic\media\image\3.jpg" />
+    <Content Include="metronic\media\image\4.jpg" />
+    <Content Include="metronic\media\image\5.jpg" />
+    <Content Include="metronic\media\image\6.jpg" />
+    <Content Include="metronic\media\image\7.jpg" />
+    <Content Include="metronic\media\image\8.jpg" />
+    <Content Include="metronic\media\image\9.jpg" />
+    <Content Include="metronic\media\image\alpha.png" />
+    <Content Include="metronic\media\image\amazon.png" />
+    <Content Include="metronic\media\image\animated-overlay.gif" />
+    <Content Include="metronic\media\image\avatar.png" />
+    <Content Include="metronic\media\image\avatar1.jpg" />
+    <Content Include="metronic\media\image\avatar1_small.jpg" />
+    <Content Include="metronic\media\image\avatar2.jpg" />
+    <Content Include="metronic\media\image\avatar3.jpg" />
+    <Content Include="metronic\media\image\behance.png" />
+    <Content Include="metronic\media\image\bg-input-focus.png" />
+    <Content Include="metronic\media\image\bg-input.png" />
+    <Content Include="metronic\media\image\bg-opacity.png" />
+    <Content Include="metronic\media\image\bg-white-lock.png" />
+    <Content Include="metronic\media\image\bg\1.jpg" />
+    <Content Include="metronic\media\image\bg\2.jpg" />
+    <Content Include="metronic\media\image\bg\3.jpg" />
+    <Content Include="metronic\media\image\bg\4.jpg" />
+    <Content Include="metronic\media\image\blank.gif" />
+    <Content Include="metronic\media\image\blogger.png" />
+    <Content Include="metronic\media\image\bstree-halflings.png" />
+    <Content Include="metronic\media\image\chosen-sprite.png" />
+    <Content Include="metronic\media\image\css" />
+    <Content Include="metronic\media\image\datatable-row-openclose.png" />
+    <Content Include="metronic\media\image\deviantart.png" />
+    <Content Include="metronic\media\image\dribbble.png" />
+    <Content Include="metronic\media\image\dropbox.png" />
+    <Content Include="metronic\media\image\earth.jpg" />
+    <Content Include="metronic\media\image\evernote.png" />
+    <Content Include="metronic\media\image\facebook.png" />
+    <Content Include="metronic\media\image\fancybox_loading.gif" />
+    <Content Include="metronic\media\image\fancybox_overlay.png" />
+    <Content Include="metronic\media\image\fancybox_sprite.png" />
+    <Content Include="metronic\media\image\favicon.ico" />
+    <Content Include="metronic\media\image\fontawesome-webfont.eot" />
+    <Content Include="metronic\media\image\fontawesome-webfont.svg" />
+    <Content Include="metronic\media\image\fontawesome-webfont.ttf" />
+    <Content Include="metronic\media\image\fontawesome-webfont.woff" />
+    <Content Include="metronic\media\image\forrst.png" />
+    <Content Include="metronic\media\image\github.png" />
+    <Content Include="metronic\media\image\glyphicons-halflings-white.png" />
+    <Content Include="metronic\media\image\glyphicons-halflings.png" />
+    <Content Include="metronic\media\image\glyphicons-regular.eot" />
+    <Content Include="metronic\media\image\glyphicons-regular.svg" />
+    <Content Include="metronic\media\image\glyphicons-regular.ttf" />
+    <Content Include="metronic\media\image\glyphicons-regular.woff" />
+    <Content Include="metronic\media\image\glyphicons-white.png" />
+    <Content Include="metronic\media\image\glyphicons-white.svg" />
+    <Content Include="metronic\media\image\glyphicons.png" />
+    <Content Include="metronic\media\image\glyphiconshalflings-regular.eot" />
+    <Content Include="metronic\media\image\glyphiconshalflings-regular.svg" />
+    <Content Include="metronic\media\image\glyphiconshalflings-regular.ttf" />
+    <Content Include="metronic\media\image\glyphiconshalflings-regular.woff" />
+    <Content Include="metronic\media\image\glyphicons_halflings-white.png" />
+    <Content Include="metronic\media\image\glyphicons_halflings-white.svg" />
+    <Content Include="metronic\media\image\glyphicons_halflings.png" />
+    <Content Include="metronic\media\image\glyphicons_halflings.svg" />
+    <Content Include="metronic\media\image\googleplus.png" />
+    <Content Include="metronic\media\image\gritter-light.png" />
+    <Content Include="metronic\media\image\gritter.png" />
+    <Content Include="metronic\media\image\hor-menu-search-close-white.png" />
+    <Content Include="metronic\media\image\hor-menu-search-close.png" />
+    <Content Include="metronic\media\image\hor-menu-search.png" />
+    <Content Include="metronic\media\image\hue.png" />
+    <Content Include="metronic\media\image\icon-color-close.png" />
+    <Content Include="metronic\media\image\icon-color.png" />
+    <Content Include="metronic\media\image\icon-img-down.png" />
+    <Content Include="metronic\media\image\icon-img-up.png" />
+    <Content Include="metronic\media\image\ie-spacer.gif" />
+    <Content Include="metronic\media\image\image1.jpg" />
+    <Content Include="metronic\media\image\image2.jpg" />
+    <Content Include="metronic\media\image\image3.jpg" />
+    <Content Include="metronic\media\image\image4.jpg" />
+    <Content Include="metronic\media\image\image5.jpg" />
+    <Content Include="metronic\media\image\img1.png" />
+    <Content Include="metronic\media\image\img1_2.png" />
+    <Content Include="metronic\media\image\img2.png" />
+    <Content Include="metronic\media\image\img3.png" />
+    <Content Include="metronic\media\image\img4.png" />
+    <Content Include="metronic\media\image\inbox-nav-arrow-blue.png" />
+    <Content Include="metronic\media\image\instagram.png" />
+    <Content Include="metronic\media\image\iphone.png" />
+    <Content Include="metronic\media\image\item_img.jpg" />
+    <Content Include="metronic\media\image\item_img1.jpg" />
+    <Content Include="metronic\media\image\jolicloud.png" />
+    <Content Include="metronic\media\image\js" />
+    <Content Include="metronic\media\image\KwPYo.jpg" />
+    <Content Include="metronic\media\image\last-fm.png" />
+    <Content Include="metronic\media\image\linkedin.png" />
+    <Content Include="metronic\media\image\loading.gif" />
+    <Content Include="metronic\media\image\logo-big.png" />
+    <Content Include="metronic\media\image\logo.png" />
+    <Content Include="metronic\media\image\logo_azteca.jpg" />
+    <Content Include="metronic\media\image\logo_conquer.jpg" />
+    <Content Include="metronic\media\image\logo_metronic.jpg" />
+    <Content Include="metronic\media\image\menu-toggler.png" />
+    <Content Include="metronic\media\image\overlay-icon.png" />
+    <Content Include="metronic\media\image\photo1.jpg" />
+    <Content Include="metronic\media\image\photo2.jpg" />
+    <Content Include="metronic\media\image\photo3.jpg" />
+    <Content Include="metronic\media\image\photo4.jpg" />
+    <Content Include="metronic\media\image\photo5.jpg" />
+    <Content Include="metronic\media\image\photo6.jpg" />
+    <Content Include="metronic\media\image\picasa.png" />
+    <Content Include="metronic\media\image\pintrest.png" />
+    <Content Include="metronic\media\image\portlet-collapse-icon-white.png" />
+    <Content Include="metronic\media\image\portlet-collapse-icon.png" />
+    <Content Include="metronic\media\image\portlet-config-icon-white.png" />
+    <Content Include="metronic\media\image\portlet-config-icon.png" />
+    <Content Include="metronic\media\image\portlet-expand-icon-white.png" />
+    <Content Include="metronic\media\image\portlet-expand-icon.png" />
+    <Content Include="metronic\media\image\portlet-reload-icon-white.png" />
+    <Content Include="metronic\media\image\portlet-reload-icon.png" />
+    <Content Include="metronic\media\image\portlet-remove-icon-white.png" />
+    <Content Include="metronic\media\image\portlet-remove-icon.png" />
+    <Content Include="metronic\media\image\preview_02.png" />
+    <Content Include="metronic\media\image\preview_03.png" />
+    <Content Include="metronic\media\image\preview_04.png" />
+    <Content Include="metronic\media\image\preview_05.png" />
+    <Content Include="metronic\media\image\preview_06.png" />
+    <Content Include="metronic\media\image\preview_07.png" />
+    <Content Include="metronic\media\image\preview_08.png" />
+    <Content Include="metronic\media\image\preview_09.png" />
+    <Content Include="metronic\media\image\preview_10.png" />
+    <Content Include="metronic\media\image\preview_11.png" />
+    <Content Include="metronic\media\image\preview_12.png" />
+    <Content Include="metronic\media\image\preview_13.png" />
+    <Content Include="metronic\media\image\preview_14.png" />
+    <Content Include="metronic\media\image\preview_15.png" />
+    <Content Include="metronic\media\image\preview_16.png" />
+    <Content Include="metronic\media\image\preview_17.png" />
+    <Content Include="metronic\media\image\profile-img.png" />
+    <Content Include="metronic\media\image\profile.jpg" />
+    <Content Include="metronic\media\image\progressbar.gif" />
+    <Content Include="metronic\media\image\remove-icon-small.png" />
+    <Content Include="metronic\media\image\rss.png" />
+    <Content Include="metronic\media\image\saturation.png" />
+    <Content Include="metronic\media\image\search-icon.png" />
+    <Content Include="metronic\media\image\select2-spinner.gif" />
+    <Content Include="metronic\media\image\select2.png" />
+    <Content Include="metronic\media\image\select2x2.png" />
+    <Content Include="metronic\media\image\sidebar-menu-arrow.png" />
+    <Content Include="metronic\media\image\sidebar-search-close.png" />
+    <Content Include="metronic\media\image\sidebar-toggler.jpg" />
+    <Content Include="metronic\media\image\skype.png" />
+    <Content Include="metronic\media\image\social_facebook.png" />
+    <Content Include="metronic\media\image\social_googleplus.png" />
+    <Content Include="metronic\media\image\social_linkedin.png" />
+    <Content Include="metronic\media\image\social_rss.png" />
+    <Content Include="metronic\media\image\social_twitter.png" />
+    <Content Include="metronic\media\image\sort_asc.png" />
+    <Content Include="metronic\media\image\sort_asc_disabled.png" />
+    <Content Include="metronic\media\image\sort_both.png" />
+    <Content Include="metronic\media\image\sort_desc.png" />
+    <Content Include="metronic\media\image\sort_desc_disabled.png" />
+    <Content Include="metronic\media\image\spotify.png" />
+    <Content Include="metronic\media\image\sprite.png" />
+    <Content Include="metronic\media\image\spritemap%402x.png" />
+    <Content Include="metronic\media\image\spritemap.png" />
+    <Content Include="metronic\media\image\stumbleupon.png" />
+    <Content Include="metronic\media\image\switch.png" />
+    <Content Include="metronic\media\image\syncfusion-icons-white.png" />
+    <Content Include="metronic\media\image\syncfusion-icons.png" />
+    <Content Include="metronic\media\image\tumblr.png" />
+    <Content Include="metronic\media\image\twitter.png" />
+    <Content Include="metronic\media\image\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="metronic\media\image\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="metronic\media\image\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="metronic\media\image\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="metronic\media\image\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="metronic\media\image\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="metronic\media\image\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="metronic\media\image\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="metronic\media\image\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="metronic\media\image\ui-icons_222222_256x240.png" />
+    <Content Include="metronic\media\image\ui-icons_228ef1_256x240.png" />
+    <Content Include="metronic\media\image\ui-icons_888888_256x240.png" />
+    <Content Include="metronic\media\image\ui-icons_ef8c08_256x240.png" />
+    <Content Include="metronic\media\image\ui-icons_ffd27a_256x240.png" />
+    <Content Include="metronic\media\image\ui-icons_ffffff_256x240.png" />
+    <Content Include="metronic\media\image\vimeo.png" />
+    <Content Include="metronic\media\image\vk.png" />
+    <Content Include="metronic\media\image\walmart.png" />
+    <Content Include="metronic\media\image\wordpress.png" />
+    <Content Include="metronic\media\image\xing.png" />
+    <Content Include="metronic\media\image\yahoo.png" />
+    <Content Include="metronic\media\image\youtube.png" />
+    <Content Include="metronic\media\js\additional-methods.min.js" />
+    <Content Include="metronic\media\js\app.js" />
+    <Content Include="metronic\media\js\bootstrap-colorpicker.js" />
+    <Content Include="metronic\media\js\bootstrap-datepicker.js" />
+    <Content Include="metronic\media\js\bootstrap-datetimepicker.js" />
+    <Content Include="metronic\media\js\bootstrap-fileupload.js" />
+    <Content Include="metronic\media\js\bootstrap-modal.js" />
+    <Content Include="metronic\media\js\bootstrap-modalmanager.js" />
+    <Content Include="metronic\media\js\bootstrap-rtl.min.js" />
+    <Content Include="metronic\media\js\bootstrap-tag.js" />
+    <Content Include="metronic\media\js\bootstrap-timepicker.js" />
+    <Content Include="metronic\media\js\bootstrap-tree.js" />
+    <Content Include="metronic\media\js\bootstrap-wysihtml5.js" />
+    <Content Include="metronic\media\js\bootstrap.min.js" />
+    <Content Include="metronic\media\js\breakpoints.js" />
+    <Content Include="metronic\media\js\breakpoints.min.js" />
+    <Content Include="metronic\media\js\calendar.js" />
+    <Content Include="metronic\media\js\canvas-to-blob.min.js" />
+    <Content Include="metronic\media\js\charts.js" />
+    <Content Include="metronic\media\js\chosen.jquery.min.js" />
+    <Content Include="metronic\media\js\ckeditor.js" />
+    <Content Include="metronic\media\js\clockface.js" />
+    <Content Include="metronic\media\js\coming-soon.js" />
+    <Content Include="metronic\media\js\contact-us.js" />
+    <Content Include="metronic\media\js\date.js" />
+    <Content Include="metronic\media\js\daterangepicker.js" />
+    <Content Include="metronic\media\js\dropzone.js" />
+    <Content Include="metronic\media\js\DT_bootstrap.js" />
+    <Content Include="metronic\media\js\excanvas.js" />
+    <Content Include="metronic\media\js\excanvas.min.js" />
+    <Content Include="metronic\media\js\form-components.js" />
+    <Content Include="metronic\media\js\form-fileupload.js" />
+    <Content Include="metronic\media\js\form-samples.js" />
+    <Content Include="metronic\media\js\form-validation.js" />
+    <Content Include="metronic\media\js\form-wizard.js" />
+    <Content Include="metronic\media\js\fullcalendar.min.js" />
+    <Content Include="metronic\media\js\gallery.js" />
+    <Content Include="metronic\media\js\gmaps.js" />
+    <Content Include="metronic\media\js\inbox.js" />
+    <Content Include="metronic\media\js\index.js" />
+    <Content Include="metronic\media\js\jquery-1.10.1.min.js" />
+    <Content Include="metronic\media\js\jquery-1.8.3.min.js" />
+    <Content Include="metronic\media\js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="metronic\media\js\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="metronic\media\js\jquery.backstretch.min.js" />
+    <Content Include="metronic\media\js\jquery.blockui.min.js" />
+    <Content Include="metronic\media\js\jquery.bootpag.min.js" />
+    <Content Include="metronic\media\js\jquery.bootstrap.wizard.min.js" />
+    <Content Include="metronic\media\js\jquery.cookie.min.js" />
+    <Content Include="metronic\media\js\jquery.countdown.js" />
+    <Content Include="metronic\media\js\jquery.dataTables.js" />
+    <Content Include="metronic\media\js\jquery.dataTables.min.js" />
+    <Content Include="metronic\media\js\jquery.easy-pie-chart.js" />
+    <Content Include="metronic\media\js\jquery.fancybox.pack.js" />
+    <Content Include="metronic\media\js\jquery.fileupload-fp.js" />
+    <Content Include="metronic\media\js\jquery.fileupload-ui.js" />
+    <Content Include="metronic\media\js\jquery.fileupload.js" />
+    <Content Include="metronic\media\js\jquery.flot.crosshair.js" />
+    <Content Include="metronic\media\js\jquery.flot.js" />
+    <Content Include="metronic\media\js\jquery.flot.pie.js" />
+    <Content Include="metronic\media\js\jquery.flot.resize.js" />
+    <Content Include="metronic\media\js\jquery.flot.stack.js" />
+    <Content Include="metronic\media\js\jquery.gritter.js" />
+    <Content Include="metronic\media\js\jquery.iframe-transport.js" />
+    <Content Include="metronic\media\js\jquery.input-ip-address-control-1.0.min.js" />
+    <Content Include="metronic\media\js\jquery.inputmask.bundle.min.js" />
+    <Content Include="metronic\media\js\jquery.knob.js" />
+    <Content Include="metronic\media\js\jquery.multi-select.js" />
+    <Content Include="metronic\media\js\jquery.nestable.js" />
+    <Content Include="metronic\media\js\jquery.pulsate.min.js" />
+    <Content Include="metronic\media\js\jquery.slimscroll.min.js" />
+    <Content Include="metronic\media\js\jquery.sparkline.min.js" />
+    <Content Include="metronic\media\js\jquery.tagsinput.min.js" />
+    <Content Include="metronic\media\js\jquery.toggle.buttons.js" />
+    <Content Include="metronic\media\js\jquery.ui.widget.js" />
+    <Content Include="metronic\media\js\jquery.uniform.min.js" />
+    <Content Include="metronic\media\js\jquery.validate.min.js" />
+    <Content Include="metronic\media\js\jquery.vmap.europe.js" />
+    <Content Include="metronic\media\js\jquery.vmap.germany.js" />
+    <Content Include="metronic\media\js\jquery.vmap.js" />
+    <Content Include="metronic\media\js\jquery.vmap.russia.js" />
+    <Content Include="metronic\media\js\jquery.vmap.sampledata.js" />
+    <Content Include="metronic\media\js\jquery.vmap.usa.js" />
+    <Content Include="metronic\media\js\jquery.vmap.world.js" />
+    <Content Include="metronic\media\js\jquery.xdr-transport.js" />
+    <Content Include="metronic\media\js\load-image.min.js" />
+    <Content Include="metronic\media\js\lock.js" />
+    <Content Include="metronic\media\js\login-soft.js" />
+    <Content Include="metronic\media\js\login.js" />
+    <Content Include="metronic\media\js\maps-google.js" />
+    <Content Include="metronic\media\js\maps-vector.js" />
+    <Content Include="metronic\media\js\portlet-draggable.js" />
+    <Content Include="metronic\media\js\respond.js" />
+    <Content Include="metronic\media\js\respond.min.js" />
+    <Content Include="metronic\media\js\search.js" />
+    <Content Include="metronic\media\js\select2.min.js" />
+    <Content Include="metronic\media\js\table-advanced.js" />
+    <Content Include="metronic\media\js\table-editable.js" />
+    <Content Include="metronic\media\js\table-managed.js" />
+    <Content Include="metronic\media\js\tmpl.min.js" />
+    <Content Include="metronic\media\js\ui-general.js" />
+    <Content Include="metronic\media\js\ui-jqueryui.js" />
+    <Content Include="metronic\media\js\ui-modals.js" />
+    <Content Include="metronic\media\js\ui-nestable.js" />
+    <Content Include="metronic\media\js\ui-sliders.js" />
+    <Content Include="metronic\media\js\ui-tree.js" />
+    <Content Include="metronic\media\js\wysihtml5-0.3.0.js" />
+    <Content Include="metronic\page_about.html" />
+    <Content Include="metronic\page_blog.html" />
+    <Content Include="metronic\page_blog_item.html" />
+    <Content Include="metronic\page_calendar.html" />
+    <Content Include="metronic\page_coming_soon.html" />
+    <Content Include="metronic\page_contact.html" />
+    <Content Include="metronic\page_news.html" />
+    <Content Include="metronic\page_news_item.html" />
+    <Content Include="metronic\page_timeline.html" />
+    <Content Include="metronic\portlet_draggable.html" />
+    <Content Include="metronic\portlet_general.html" />
+    <Content Include="metronic\source.txt" />
+    <Content Include="metronic\table_advanced.html" />
+    <Content Include="metronic\table_basic.html" />
+    <Content Include="metronic\table_editable.html" />
+    <Content Include="metronic\table_managed.html" />
+    <Content Include="metronic\table_responsive.html" />
+    <Content Include="metronic\ui_buttons.html" />
+    <Content Include="metronic\ui_general.html" />
+    <Content Include="metronic\ui_jqueryui.html" />
+    <Content Include="metronic\ui_modals.html" />
+    <Content Include="metronic\ui_nestable.html" />
+    <Content Include="metronic\ui_sliders.html" />
+    <Content Include="metronic\ui_tabs_accordions.html" />
+    <Content Include="metronic\ui_tiles.html" />
+    <Content Include="metronic\ui_tree.html" />
+    <Content Include="metronic\ui_typography.html" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.validate\jquery.validate.additional-methods.js" />
+    <Content Include="Scripts\jquery.validate\jquery.validate.messages_cn.js" />
+    <Content Include="Scripts\knockout-3.0.0.debug.js" />
+    <Content Include="Scripts\knockout-3.0.0.js" />
+    <Content Include="Scripts\modernizr-2.7.1.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EFPNet.Core\EFPNet.Core.csproj">
+      <Project>{E78F59FD-F19E-47DA-B925-A03331A4EA87}</Project>
+      <Name>EFPNet.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.Infrastructure.Data\EFPNet.Infrastructure.Data.csproj">
+      <Project>{3468b2db-badf-4952-9b9e-fa352fcc46be}</Project>
+      <Name>EFPNet.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.Infrastructure.Tools\EFPNet.Infrastructure.Tools.csproj">
+      <Project>{c2346abb-30c8-4404-97aa-24333d36ed22}</Project>
+      <Name>EFPNet.Infrastructure.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.IService\EFPNet.IService.csproj">
+      <Project>{71026cc1-e914-41d3-8ebb-1cb7dc9370ac}</Project>
+      <Name>EFPNet.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.Repositories\EFPNet.Repositories.csproj">
+      <Project>{0a9f86be-dbf1-4da3-8810-43a1be9b6af2}</Project>
+      <Name>EFPNet.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.Service\EFPNet.Service.csproj">
+      <Project>{b1194363-e60e-41c8-9470-81904ceab628}</Project>
+      <Name>EFPNet.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.ViewModel\EFPNet.ViewModel.csproj">
+      <Project>{EDF3DCF9-CA54-413F-9113-7D35C4044FED}</Project>
+      <Name>EFPNet.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\About.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14674</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:14674/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://localhost:8010/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
