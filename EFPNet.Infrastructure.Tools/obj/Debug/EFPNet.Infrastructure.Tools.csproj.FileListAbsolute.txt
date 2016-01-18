@@ -17,3 +17,17 @@ F:\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\log4net.xml
 F:\我的项目\EFPNet\EFPNet.Infrastructure.Tools\obj\Debug\EFPNet.Infrastructure.Tools.csprojResolveAssemblyReference.cache
 F:\我的项目\EFPNet\EFPNet.Infrastructure.Tools\obj\Debug\EFPNet.Infrastructure.Tools.dll
 F:\我的项目\EFPNet\EFPNet.Infrastructure.Tools\obj\Debug\EFPNet.Infrastructure.Tools.pdb
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\EFPNet.Infrastructure.Tools.dll
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\EFPNet.Infrastructure.Tools.pdb
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\log4net.dll
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\System.Web.Http.dll
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\System.Net.Http.Formatting.dll
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\Newtonsoft.Json.dll
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\log4net.xml
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\System.Web.Http.xml
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\System.Net.Http.Formatting.xml
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\zh-Hans\System.Web.Http.resources.dll
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\bin\Debug\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\obj\Debug\EFPNet.Infrastructure.Tools.csprojResolveAssemblyReference.cache
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\obj\Debug\EFPNet.Infrastructure.Tools.dll
+D:\zh\我的项目\EFPNet\EFPNet.Infrastructure.Tools\obj\Debug\EFPNet.Infrastructure.Tools.pdb

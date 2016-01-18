@@ -87,7 +87,7 @@ namespace EFPNet.Web.MVC.Test
         {
             DbInitializerService.Initialize();
             var rrepository = Container.GetContainer().Resolve<IRoleRepository>();
-            var r = new Role { RoleName = "员工", RoleDesc = "普通员工" };
+            var r = new Role { RoleName = "员工1", RoleDesc = "普通员工" };
             rrepository.Insert(r);
         }
 
