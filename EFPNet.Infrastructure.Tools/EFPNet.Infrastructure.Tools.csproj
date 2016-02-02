@@ -58,6 +58,7 @@
     <Compile Include="Exception\ServiceException.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Ioc\IocContainer.cs" />
     <Compile Include="Log\LogHelper.cs" />
     <Compile Include="OperationResult.cs" />
     <Compile Include="OperationResultType.cs" />

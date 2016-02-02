@@ -95,7 +95,7 @@ namespace EFPNet.Web.MVC.Controllers
         /// <param name="filterContext"></param>
         protected override void OnException(ExceptionContext filterContext)
         {
-            LogHelper.Log(filterContext.Exception);
+            LogHelper.Error(filterContext.Exception);
             // 执行基类中的OnException
             base.OnException(filterContext);
         }
