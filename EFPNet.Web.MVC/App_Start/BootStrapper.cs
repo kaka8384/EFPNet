@@ -13,12 +13,13 @@ namespace EFPNet.Web.MVC.App_Start
             var assembly = Assembly.GetExecutingAssembly();
             builder.RegisterControllers(assembly);
             var uassembly = Assembly.Load("EFPNet.Repositories");
-            builder.RegisterAssemblyTypes(uassembly).Where(a => a.Name.EndsWith("Repository")).AsImplementedInterfaces();
+            builder.RegisterAssemblyTypes(uassembly).Where(a => a.Name.EndsWith("Repository")).AsImplementedInterfaces().PropertiesAutowired();
             var sassembly = Assembly.Load("EFPNet.Service");
-            builder.RegisterAssemblyTypes(sassembly).Where(a => a.Name.EndsWith("Service")).AsImplementedInterfaces();
-            //builder.RegisterControllers(sassembly);
+            builder.RegisterAssemblyTypes(sassembly).Where(a => a.Name.EndsWith("Service")).AsImplementedInterfaces().PropertiesAutowired();
+            builder.RegisterFilterProvider();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
         }
     }
 }

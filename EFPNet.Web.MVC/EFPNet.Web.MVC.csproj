@@ -51,6 +51,10 @@
     <Reference Include="EFP.Common">
       <HintPath>..\lib\EFP.Common.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Jquery.Validate.Additional">
       <HintPath>..\packages\jquery.validate.china.1.0.5\lib\net45\Jquery.Validate.Additional.dll</HintPath>
     </Reference>
@@ -58,6 +62,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -623,6 +628,10 @@
     <ProjectReference Include="..\EFPNet.Core\EFPNet.Core.csproj">
       <Project>{E78F59FD-F19E-47DA-B925-A03331A4EA87}</Project>
       <Name>EFPNet.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFPNet.Domain.Data\EFPNet.Domain.Data.csproj">
+      <Project>{639f1f01-806a-46c1-b8e0-53c559a54736}</Project>
+      <Name>EFPNet.Domain.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\EFPNet.Infrastructure.Data\EFPNet.Infrastructure.Data.csproj">
       <Project>{3468b2db-badf-4952-9b9e-fa352fcc46be}</Project>

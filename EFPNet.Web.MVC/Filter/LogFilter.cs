@@ -1,5 +1,4 @@
-﻿using EFPNet.Core;
-using EFPNet.IService;
+﻿using EFPNet.IService;
 using System;
 using System.Web;
 using System.Web.Mvc;
@@ -11,15 +10,17 @@ namespace EFPNet.Web.MVC
 {
     public class LogFilter : ActionFilterAttribute
     {
-        private static IOperateLogService _logService;
+        //private static IOperateLogService _logService;
+
+        public IOperateLogService LogService { get; set; }
 
         public string LogDesc { get; set; }
  
-        public LogFilter()
-        {
-            var container = ApplicationContainer.GetContainer();
-            _logService = container.Resolve<IOperateLogService>();
-        }
+        //public LogFilter()
+        //{
+        //    var container = ApplicationContainer.GetContainer();
+        //    _logService = container.Resolve<IOperateLogService>();
+        //}
 
         //public override void OnActionExecuting(ActionExecutingContext filterContext)
         //{
@@ -56,8 +57,8 @@ namespace EFPNet.Web.MVC
                 IP = EFP.Common.Tool.WebTools.GetIPAddress(),
                 Event=opEvent
             };
-            
-            _logService.AddLog(model);
+
+            LogService.AddLog(model);
         }
     }
 }

@@ -12,6 +12,12 @@ namespace EFPNet.Infrastructure.Tools
     public class OperationResult
     {
         #region 构造函数
+        /// <summary>
+        ///     初始化一个 业务操作结果信息类 的新实例
+        /// </summary>
+        public OperationResult()
+        {
+        }
 
         /// <summary>
         ///     初始化一个 业务操作结果信息类 的新实例

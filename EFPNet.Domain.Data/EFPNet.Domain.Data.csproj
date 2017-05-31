@@ -53,7 +53,6 @@
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DomainContainer.cs" />
-    <Compile Include="EfpCachingDbContext.cs" />
     <Compile Include="EFPDbContext.cs" />
     <Compile Include="EFRepositoryBase.cs" />
     <Compile Include="EFUnitOfWorkContext.cs" />

@@ -14,8 +14,8 @@ namespace EFPNet.Domain.Data
             {
                 var builder = new ContainerBuilder();
                 builder.RegisterType<EFUnitOfWorkContext>().As<IUnitOfWork>().InstancePerLifetimeScope();
+                builder.RegisterType<EfpDbContext>().As<IDbContext>().InstancePerLifetimeScope();
                 builder.RegisterType<EfpDbContext>().Named<DbContext>("EF").InstancePerLifetimeScope();
-                builder.RegisterType<EfpCachingDbContext>().Named<DbContext>("EFCaching").InstancePerLifetimeScope();
                 _builder = builder.Build();
             }
             return _builder;

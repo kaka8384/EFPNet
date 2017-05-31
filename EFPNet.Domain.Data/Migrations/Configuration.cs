@@ -28,19 +28,19 @@ namespace EFPNet.Domain.Data.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            //var user = new User()
-            //{
-            //    Id =Guid.NewGuid(),
-            //    UserName = "test",
-            //    Password = "123456",
-            //    AddDate = DateTime.Now,
-            //    Email = "test@126.com",
-            //    LastUpdateDate = DateTime.Now,
-            //    Mobile="13768982283",
-            //    NickName="",
-            //    RealName=""
-            //};
-            //context.Users.AddOrUpdate(user);
+            var user = new User()
+            {
+                Id = Guid.NewGuid(),
+                UserName = "test",
+                Password = "123456",
+                AddDate = DateTime.Now,
+                Email = "test@126.com",
+                LastUpdateDate = DateTime.Now,
+                Mobile = "13768982283",
+                NickName = "",
+                RealName = ""
+            };
+            context.Users.AddOrUpdate(user);
 
         }
     }

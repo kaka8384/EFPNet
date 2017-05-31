@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\AddUserDto.cs" />
     <Compile Include="Account\LoginDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System\OperateLogDto.cs" />

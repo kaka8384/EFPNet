@@ -11,14 +11,16 @@ using EFPNet.Infrastructure.Tools;
 using EFPNet.Infrastructure.Tools.Account;
 using EFPNet.ViewModel;
 using EmitMapper;
+using EFPNet.ViewModel.Account;
+using EFPNet.Infrastructure.Data;
 
 namespace EFPNet.Service
 {
     internal class UserService : IUserService
     {
-        private static IUserRepository _userRepository;
+        private static IRepository<User,Guid> _userRepository;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IRepository<User, Guid> userRepository)
         {
             _userRepository=userRepository;
         }
@@ -49,6 +51,26 @@ namespace EFPNet.Service
             FormsPrincipal<UserInfo>.SignIn(dto.UserName, userinfo, expiration);  //
             //FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
             return new OperationResult(OperationResultType.Success, "登录成功。");
+        }
+
+        /// <summary>
+        /// 添加用户
+        /// </summary>
+        /// <param name="userDto">用户数据</param>
+        /// <returns></returns>
+        public OperationResult AddUser(AddUserDto userDto)
+        {
+            var result = new OperationResult();
+            PublicHelper.CheckArgument(userDto, "AddUserDto");  //检查参数
+            var mapper = ObjectMapperManager.DefaultInstance.GetMapper<AddUserDto, User>();
+            User user = mapper.Map(userDto);
+            user.AddDate = DateTime.Now;
+            int affectRows=_userRepository.Insert(user);
+            if (affectRows>0)
+            {
+                result.ResultType = OperationResultType.Success;
+            }
+            return result;
         }
     }
 }

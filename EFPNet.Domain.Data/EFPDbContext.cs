@@ -1,13 +1,14 @@
 ﻿using System.Data.Entity;
 using EFPNet.Domains.Model;
 using EFPNet.Domains.ModelConfigurations;
+using EFPNet.Infrastructure.Data;
 
 namespace EFPNet.Domain.Data
 {
     /// <summary>
     /// 表示专用于EFPNet的数据访问上下文。
     /// </summary>
-    public class EfpDbContext:DbContext
+    public class EfpDbContext : DbContext, IDbContext
     {
         #region 构造函数
         /// <summary>

@@ -2,7 +2,6 @@
 using System.Web;
 using System.Web.Mvc;
 using Autofac;
-using EFPNet.Core;
 using EFPNet.IService;
 using EFPNet.Infrastructure.Tools.Account;
 
@@ -17,7 +16,7 @@ namespace EFPNet.Web.MVC
         //    _actionrightService = actionrightService;
         //}
 
-        public IActionRightService acs { get; set; }
+        public IActionRightService ActionRightService { get; set; }
 
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
@@ -49,10 +48,10 @@ namespace EFPNet.Web.MVC
             base.OnAuthorization(filterContext);
             var controller = filterContext.RouteData.Values["controller"].ToString(); //当前访问的controller名称
             var action = filterContext.RouteData.Values["action"].ToString();
-            var container = ApplicationContainer.GetContainer();  
-            var service = container.Resolve<IActionRightService>();
-            var jj = acs;
-            service.CheckRight(controller, action);
+            //var container = ApplicationContainer.GetContainer();  
+            //var service = container.Resolve<IActionRightService>();
+            //var jj = acs;
+            ActionRightService.CheckRight(controller, action);
             //if (filterContext.HttpContext.Response.StatusCode == 403)
             //{
             //    filterContext.Result = new RedirectResult("/Admin/Dashboard");

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DataHelper.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
+    <Compile Include="IDbContext.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="IUnitOfWorkContext.cs" />

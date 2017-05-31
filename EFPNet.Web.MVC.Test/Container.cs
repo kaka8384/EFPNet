@@ -22,7 +22,6 @@ namespace EFPNet.Web.MVC.Test
                 var builder = new ContainerBuilder();
                 builder.RegisterType<EFUnitOfWorkContext>().As<IUnitOfWork>().InstancePerLifetimeScope();
                 builder.RegisterType<EfpDbContext>().Named<DbContext>("EF").InstancePerLifetimeScope();
-                builder.RegisterType<EfpCachingDbContext>().Named<DbContext>("EFCaching").InstancePerLifetimeScope();
                 var uassembly = Assembly.Load("EFPNet.Repositories");
                 builder.RegisterAssemblyTypes(uassembly).Where(a => a.Name.EndsWith("Repository")).AsImplementedInterfaces();
                 _builder = builder.Build();
